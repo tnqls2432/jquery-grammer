@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <title> 객체 조작 및 생성 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	//unwrap()메서드는 선택한 요소의 부모 요소를 삭제한다. wrap()메서드는 선택한 요소를 각각
+	// 새 요소로 감싸고, wrapAll()메서드는 선택한 요소를 한꺼번에 새 요소로 감싼다.
+	// wrapInner()메서드는 선택한 요소의 모든 하위 요소를 새 요소로 감싼다.
 	$(function( ){
 		$("strong").unwrap( ); 
 		$(".ct1").wrap("<div />");

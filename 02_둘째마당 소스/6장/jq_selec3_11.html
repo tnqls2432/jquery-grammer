@@ -4,9 +4,14 @@
 <meta charset="UTF-8">
 <title> 객체 조작 및 생성 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	// clone 메서드는 선택한 요소를 복제한다.
+	// empty() 메서드는 선택한 요소의 모든 하위 요스를 삭제한다.
+	// remove() 메서드는 선택한 요소를 삭제한다.
 	$(function( ){
 		var copyObj = $(".box1").children().clone();
+		console.log(copyObj);
 
 		$(".box2").remove( );
 

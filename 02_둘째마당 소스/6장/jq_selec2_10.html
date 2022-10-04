@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <title> 탐색 선택자 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
 	$(function(){
+		// 지정 선택 요소를 찾아서 인덱스값을 반환한다.
 		var idxNum = $("li").index($("#list3"));
 		console.log(idxNum);
 	});

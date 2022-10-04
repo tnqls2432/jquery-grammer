@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <title> 객체 조작 및 생성 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	// before()와 insertBefore()메서드는 선택한 요소의 이전 위치에 새 요소를 생성하고
+	// after()와 insertAfter()메서드는 선택한 요소의 다음 위치에 새 요소를 생성한다. 
+	
 	$(function( ){
 		$("#wrap p:eq(2)").after("<p>After</p>");
 		$("<p>insertAfter</p>").insertAfter("#wrap p:eq(1)");

@@ -4,20 +4,27 @@
 <meta charset="UTF-8">
 <title> 탐색 선택자 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
 	$(function(){
+		// 선택한 p요소중 내용1을 포함하는 요소만 선택
 		$("#inner_1 p:contains(내용1)")
 		.css({"background-color":"#ff0"});
 
+		// 선택한 p요소중 strong을 포함하는 요소만 선택
 		$("#inner_1 p:has(strong)")
 		.css({"background-color":"#0ff"});
 
+		// id값이 outer_wrap인 요소의 하위 요소의 텍스트와 테그 노드 선택
 		$("#outer_wrap").contents( )
 		.css({"border":"1px dashed #00f"});
 
+		// id값이 inner_2인 요소의 하위 p요소에서 첫번째 요소만 제외하고 선택
 		$("#inner_2 p").not(":first")
 		.css({"background-color":"#0f0"});
 
+		// id값이 inner_2인 요소의 하위 p요소에서 인덱스가 2인 요소를 선택한다.
+		// 그러나 다시 end 메서드를 적용하기 때문에 인덱스를 선택하기 전의 선택자가 적용된다
 		$("#inner_2 p").eq(2).end()
 		.css({"color":"#f00"});
 	});

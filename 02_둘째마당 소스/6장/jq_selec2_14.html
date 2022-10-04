@@ -4,14 +4,18 @@
 <meta charset="UTF-8">
 <title> 탐색 선택자 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
 	$(function(){
+		// id 값이 inner_1인 요소의 하위 요소 중 class값이 .txt1인 요소를 선택하다.
 		$("#inner_1").find(".txt1")
 		.css({"background-color":"#ff0"});
 
+		// id 값이 inner_1인 요소의 하위 요소 중 class값이 .txt2인 요소를 선택한다.
 		$("#inner_1 p").filter(".txt2")
 		.css({"background-color":"#0ff"});
 
+		// id값이 inner_2이며 하위 요소인 p의 개수만큼 익명 함수가 실행된다.
 		$("#inner_2 p").filter(function(idx, obj){
 			console.log(idx);
 			return idx % 2 == 0;

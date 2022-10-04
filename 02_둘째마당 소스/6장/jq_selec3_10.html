@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <title> 객체 조작 및 생성 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	// append() 메서드와 appendTo()메서드는 선택한 요소 내의 마지막 위치에 새 요소를 생성하고 추가한다.
+	// prepend() 메서드와 prependTo() 메서드는 선택한 요소 내의 앞 위치에 새 요소를 생성하고 추가한다.
 	$(function( ){
 		$("<li>appendTo</li>").appendTo("#listZone");
 		$("#listZone").prepend("<li>prepend</li>");

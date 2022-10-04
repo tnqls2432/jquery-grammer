@@ -4,7 +4,12 @@
 <meta charset="UTF-8">
 <title> 객체 조작 및 생성 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	// addClass() 메서드는 선택한 요소에 클래스를 생성하고, 
+	// removeClass()메서드는 선택한 요소에서 지정한 클래스를 삭제한다.
+	// toggleClass() 메서드는 선택한 요소에 지정한 클래스가 없으면 생성하고, 있을 경우에는 삭제한다.
+	// hasClss() 메서드는 선택한 요소에 지정한 클래스가 있으면 true를 반환한고 없으면 false를 반환한다.
 	$(function( ){
 		$("#p1").addClass("aqua");
 		$("#p2").removeClass("red");
