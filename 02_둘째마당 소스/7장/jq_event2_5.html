@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <title> 이벤트 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
-$(function(){
+	// $(this): 이벤트 핸들러에서 $(this)를 사용하면 이벤트가 발생한 요소를 선택하여 이벤트가 발생한 요소를 추적한다.
+	// index 반환 메서드는 이벤트를 등록한 요소 중 이벤트가 발생한 요소의 인덱스값을 반환한다.
+	$(function(){
 	$(".menuWrap_1 a").on("click", function(e) {
 		e.preventDefault();
 

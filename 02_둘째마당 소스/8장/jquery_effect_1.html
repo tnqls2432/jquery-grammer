@@ -4,11 +4,28 @@
 <meta charset="UTF-8">
 <title> 효과와 애니메이션 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	// 효과 메서드의 기본형: (효과 소요 시간, 가속도, 콜백 함수)
+
+	// callback함수: 다른 함수가 실행을 끝낸 뒤 실행되는 것
+	// slow,normal,fast
+	// 효과 소요 시간은 요소를 숨기거나 노출할 때 소요되는 시간이다.
+	
+	// linear:일정한 속도로 움직인다
+	// swing: 시작과 끝은 느리게, 중간은 빠른 속도로 움직인다.(기본값)
+	// 가속도는 숨기거나 노출하는 동안의 가속도를 설정한다.
+	// 콜백 함수는 노출과 숨김 효과가 끝난 후에 실행할 함수이다.
+
+	// fade To 메서드의 기본형: 효과 소요 시간, 투명도, 콜백함수
 $(function( ) {
 	$(".btn2").hide();
 
+
+	// slide up버튼을 클릭하면 class 값이 box인 요소가 위로 접히며 숨겨진다.
+	// 그런 다음 콜백 함수가 실행되어 slide up 버튼은 숨겨지고 fadein 버튼이 나타난다.
 	$(".btn1").on("click", function( ) {
+		// slideup: 요소가 위로 접히며 숨겨진다.
 		$(".box").slideUp(1000, "linear", 
 		function( ) {
 			$(".btn1").hide( );
@@ -17,6 +34,7 @@ $(function( ) {
 	});
 
 	$(".btn2").on("click", function( ) {
+		// fadein: 숨겨진 요소가 점점 선명해진다.
 		$(".box").fadeIn(1000, "swing", 
 		function( ) {
 			$(".btn2").hide( );

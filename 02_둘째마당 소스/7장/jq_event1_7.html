@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <title> 이벤트 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	// mousecenter 이벤트 메서드는 대상 요소의 경계 범위에 마우스 포인터가 들어오면 이벤트를 발생시킨다.
+	// mouseleave 이벤트 메서드는 대상 요소의 경계 범위에서 마우스 포인터가 완전히 벗어나면 이벤트를 발생시킨다.
 $(function( ) {
 	$("#box_1").on("mouseout", function(){
 		$("#box_1")

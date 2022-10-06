@@ -3,8 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title> 효과와 애니메이션 </title>  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="js/jquery.js"></script>
 <script>
+	// 애니매이션 효과 제어 메서드
+	// 애니매이션 메서드는 함수가 적용된 순서대로 큐라는 저장소에 저장된다.
+	// 큐에 저장된 애니매이션 대기열이 있다면 먼저 들어간 애니매이션이 먼저 실행된다.
+	// stop: 현재 실행중인 효과를 모두 정지시킨다.
+	// delay: 지정한 시간만큼 지연했다가 애니매이션을 진행한다.
+	// queue: 큐에 사용자 정의 함수를 추가하거나 큐에 대기 중인 함수를 배열에 담아 반환한다.
+	//  그리고 큐 메서드 이후의 애니매이션 효과 메서드는 모두 취소한다.
+	// clearqueue: 큐에서 처음으로 진행하고 있는 애니매이션만 제외하고 대기 중인 애니매이션은 모두 제거한다.
+	// dequeue: queue 메서드를 이용하면 대기하고 있는 애니매이션 메서드는 제거된다.
+	// 하지만 dequeue 메서드를 이용하면 메서드가 제거되는 것을 막을 수 있다.
+	// finish: 선택한 요소의 진행 중인 애니매이션을 강제로 완료 시점으로 보낸 후 종료한다.  
 $(function(){
 	$(".txt1")
 	.animate({marginLeft:"300px"},1000);

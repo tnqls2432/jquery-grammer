@@ -4,7 +4,13 @@
 <meta charset="UTF-8">
 <title> 이벤트 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	// focus: 대상 요소로 포커스가 이동하면 이벤트를 발생시킨다.
+	// blur: 포커스가 대상 요소에서 다른 요소로 이동하면 이벤트를 발생시킨다.
+	// focusin: 대상 요소의 하위 요소 중 입력 요소로 포커스가 이동하면 이벤트를 발생시킨다
+	// focusout: 대상 요소의 하위 요소 중 입력 요소에서 외부 요소로 이동하면 이벤트를 발생시킨다.
+	
 $(function(){
 	$("#user_id_1, #user_pw_1").on("focus", 
 	function(){

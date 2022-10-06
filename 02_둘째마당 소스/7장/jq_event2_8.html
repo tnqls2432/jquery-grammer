@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <title> 이벤트 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	// 이벤트 제거 메서드
+	// on은 off로 bind는 unbind delegate는 undelegate로 이벤트를 해제한다.
 $(function(){
 	$(".btn_1").on("mouseover", function() {
 		alert("HELLO!");

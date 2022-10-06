@@ -4,7 +4,15 @@
 <meta charset="UTF-8">
 <title> 이벤트 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	// 키보드 이벤트는 사용자가 키보드로 입력을 하면 발생한다.
+	// 예를 들어 키를 누르거나 키에서 손을 떼면 이벤트가 발생한다.
+	// keydown과 keypress 이벤트 메서드는 선택한 요소에서 키보드 자판을 눌렀을 때 이벤트를 발생시키거나
+	// 해당 이벤트를 강제로 발생시킨다.
+	// keypress는 기능키 f1~f12, alt, ctrl, shift, 위쪽방향키, backspace, capslock, 한/영, tab
+	// 등에 대해서는 이벤트를 발생시키지 않는다.
+	// keyup 이벤트 메서드는 자판의 키를 눌렀다 키에서 손을 떼면 이벤트를 발생시킨다.
 $(function(){
 	$(document).on("keydown", keyEventFnc);
 	function keyEventFnc(e) {

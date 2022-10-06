@@ -4,18 +4,31 @@
 <meta charset="UTF-8">
 <title> 이벤트 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	// 사용자가 버튼1을 클릭하면 내용1의 글자를 빨간색으로 변경합니다.
 $(function( ) {
 	$(".btn1").click(function(){
 		$(".btn1").parent().next()
 		.css({"color":"#f00"});
 	});
 
+	// 사용자가 버튼2에 마우스 포인터를 올리거나 포커스를 이동하면
+	// 내용2의 글자를 초록색으로 변경한다.
+	
+	// mouseover: 선택한 요소의 영역에 마우스 포인터를 올렸을 때 이벤트가 발생된다.
+	// focus: 선택한 요소에 포커스가 생성되었을 때 이벤트를 발생하거나
+	// 선택한 요소에 강제로 포커스를 생성한다.
 	$(".btn2").on({
 		"mouseover focus": function() {
 			$(".btn2").parent().next()
 			.css({"color":"#0f0"});
 		},
+
+		// mouseout: 선택한 요소의 영역에 마우스 포인터가 벗어났을 때 이벤트가 발생된다.
+		// 이때 하위 요소의 영향을 받는다.
+		// blur: 포커스가 선택한 요소에서 다른 요소로 이동되었을 때 이벤트를 발생하거나
+		// 선택한 요소의 포커스가 강제로 사라지도록 한다. 
 		"mouseout blur": function() {
 			$(".btn2").parent().next()
 			.css({"color":"#000"});

@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <title> 이벤트 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	// ready이벤트 메서드는 사용자가 사이트를 방문할 때 요청한 html 문서 객체의 로딩이
+	// 끝나면 이벤트를 발생시킨다.
+	// load 이벤트 메서드는 외부에 연동된 소스의 로딩이 끝나면 이벤트를 발생시킨다.
 $(function( ) {
 	$(document).ready(function(){
 		var h1 = $(".img1").height();

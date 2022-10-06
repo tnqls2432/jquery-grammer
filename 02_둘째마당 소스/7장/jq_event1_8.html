@@ -4,10 +4,14 @@
 <meta charset="UTF-8">
 <title> 이벤트 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	// mousemove 이벤트 메
 $(function( ) {
 	$(document).on("mousemove", function(e) {
+		// 스크롤 x축의 이동한 거리를 계산하여 마우스 포인터의 x 좌표값을 반환
 		$(".posX").text(e.pageX);
+		// 스크롤 y축의 이동한 거리를 계산하여 마우스 포인터의 y 좌표값을 반환
 		$(".posY").text(e.pageY);
 	});
 });

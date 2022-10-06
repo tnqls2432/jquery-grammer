@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <title> 이벤트 </title>  
 <script src="js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+	// on 메서드는 선택한 요소에 이벤트를 등록한 이후에도 새롭게 생성되거나 복제된 요소에 이벤트를
+	// 적용할 수 있다. 즉 동적으로 생성되거나 복제된 요소에도 이벤트가 등록된다.
 $(function(){
 		$(".btn_1.on").on("mouseover focus", function() {
 			alert("HELLO!");
